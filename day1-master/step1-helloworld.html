@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // window.onload = init1;
+        window.addEventListener("load", init1);
+        document.addEventListener("DOMContentLoaded", init2);
+        function init1(){
+         console.log("window onload") 
+        };
+        function init2(){
+         console.log("DOMContentLoaded") 
+        };
+        function init3(){
+         console.log("Body Onload") 
+        };
+    </script>
+</head>
+<body onload="init3()">
+<!--body-->
+    <h1></h1>
+</body>
+</html>

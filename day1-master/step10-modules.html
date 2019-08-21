@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="module">
+    import {Hero} from "./classes/Hero.js";
+
+    var hero1 = new Hero("Ironman", "Tony", "Stark",7);
+    var hero2 = new Hero("Spiderman", "Peter", "Parker",6);
+    console.log(hero1.fullname === hero2.fullname)// true
+
+    console.log(hero1.title, hero1.fullname());
+    console.log(hero1.secret);
+    console.log(hero1.power);
+    console.log(hero2.title, hero2.fullname());
+    console.log(hero2.power);
+    console.log(hero2.secret);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

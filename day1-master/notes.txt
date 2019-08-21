@@ -1,0 +1,13 @@
+Estensions : 
+============
+Beautify
+open in browser
+Mithril Emmet
+Angular 2 TypeScript Emmet
+
+Emmet commands : 
+================
+html:5
+!
+
+Right click on the file and choose open in other browser.
