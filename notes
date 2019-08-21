@@ -6,6 +6,10 @@ ng new step1-HelloWorld //create angular application
 
 ng serve //compiling inside angular application
 
+ng g application name
+
+ng serve --project appName
+
 npm install express 
 
 node server.js //server
