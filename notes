@@ -1,0 +1,19 @@
+npm i -g @angular/cli
+
+ng v
+
+ng new step1-HelloWorld //create angular application
+
+ng serve //compiling inside angular application
+
+npm install express 
+
+node server.js //server
+
+npm install tsc
+
+tsc -init //ts-conifg.json
+
+main.ts --> module- -> component
+    module conifgured
+
