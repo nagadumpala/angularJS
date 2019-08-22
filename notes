@@ -6,7 +6,9 @@ ng new step1-HelloWorld //create angular application
 
 ng serve //start server  angular application
 
-ng g application name //create project inside applcation
+ng serve --project step3Binding --port 4567
+
+ng g application step3Binding //create project inside applcation
 
 ng g c comali --project=step3Binding  //component creation 
 

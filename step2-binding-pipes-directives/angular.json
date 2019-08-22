@@ -356,6 +356,124 @@
           }
         }
       }
+    },
+    "step5forms": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/step5forms",
+      "sourceRoot": "projects/step5forms/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/step5forms",
+            "index": "projects/step5forms/src/index.html",
+            "main": "projects/step5forms/src/main.ts",
+            "polyfills": "projects/step5forms/src/polyfills.ts",
+            "tsConfig": "projects/step5forms/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/step5forms/src/favicon.ico",
+              "projects/step5forms/src/assets"
+            ],
+            "styles": [
+              "projects/step5forms/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/step5forms/src/environments/environment.ts",
+                  "with": "projects/step5forms/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "step5forms:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "step5forms:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "step5forms:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/step5forms/src/test.ts",
+            "polyfills": "projects/step5forms/src/polyfills.ts",
+            "tsConfig": "projects/step5forms/tsconfig.spec.json",
+            "karmaConfig": "projects/step5forms/karma.conf.js",
+            "assets": [
+              "projects/step5forms/src/favicon.ico",
+              "projects/step5forms/src/assets"
+            ],
+            "styles": [
+              "projects/step5forms/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/step5forms/tsconfig.app.json",
+              "projects/step5forms/tsconfig.spec.json",
+              "projects/step5forms/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/step5forms/e2e/protractor.conf.js",
+            "devServerTarget": "step5forms:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "step5forms:serve:production"
+            }
+          }
+        }
+      }
     }},
   "defaultProject": "step2-binding-pipes-directives"
 }

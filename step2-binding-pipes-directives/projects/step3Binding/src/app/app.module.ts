@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { GridComponent } from './grid.component';
 import { MainComponent } from './main.component';
 import { HeaderComponent } from './header.component';
+import { HeroService } from './hero.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,9 +15,9 @@ import { HeaderComponent } from './header.component';
     GridComponent,HeaderComponent,MainComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, HttpClientModule
   ],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [MainComponent]
 })
 export class AppModule { }

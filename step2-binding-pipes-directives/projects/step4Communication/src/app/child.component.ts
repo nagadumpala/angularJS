@@ -10,9 +10,8 @@ import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
     <ul>
       <li>{{ citiprop }}</li>
     </ul>
-
-    <hr>
-    <button (click)="clickHandler()"></button>
+    <input #ti1 type="text">
+    <button (click)="citiEventDispacher(ti1.value)">Generate Citi Event</button>
   </div>
   `,
   styles: [`
@@ -25,14 +24,9 @@ import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
   `]
 })
 export class ChildComponent{
-  @Input('citi') 
-  citiprop = "default value";
-  @Output('citi') 
-  citievent: EventEmitter<any> = new EventEmitter();
-  
-  clickHandler(){
-    this.citievent.emit();
+  @Input() citiprop = "default value";
+  @Output() citiEvent: EventEmitter<any> = new EventEmitter();
+  citiEventDispacher(message){
+    this.citiEvent.emit(message);
   }
-
-
 }

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+
 @Component({
   selector: 'app-root',
   template : `
   <div class="box">
     <h1 [innerHTML]="title"></h1>
     <input [(ngModel)]="title" type="text">
-    <app-child [citi]="title">
+    <app-child (citiEvent)="citiEventHandler($event)" [citiprop]="title">
       <h2>Hello Child Component from Heading 2</h2>
       <h2>Hello Child Component from Heading 2</h2>
       <h3>Hello Child Component from Heading 3</h3>
@@ -25,7 +26,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Main Component';
-  citiEventHAndler(evt){
-  alert('dd'+ evt);
+  citiEventHandler(evt){
+    alert("Child comp sent : "+evt);
   }
 }
