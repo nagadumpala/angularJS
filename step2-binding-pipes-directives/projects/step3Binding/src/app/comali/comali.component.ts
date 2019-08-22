@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
   <h2> Ironman is now
   <span [(ngSwitch)]="power">
     <span *ngSwitchCase="5"><input #ti2 type="text" [(value)]="powerVal" ></span>
-    <span *ngSwitchCase="6"><input #ti2 type="text" [(value)]="powerVal" ></span>
+    <span *ngSwitchCase="6"></span>
     <span *ngSwitchCase="7"><input #ti2 type="text" [(value)]="powerVal" ></span>
     <span *ngSwitchCase="8">very strong</span>
     <span *ngSwitchCase="9">super strong</span>
