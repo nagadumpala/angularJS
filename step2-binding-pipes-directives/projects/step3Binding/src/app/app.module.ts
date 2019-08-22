@@ -3,16 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ThirdComponent } from './third.component';
+import { GridComponent } from './grid.component';
+import { MainComponent } from './main.component';
+import { HeaderComponent } from './header.component';
+
 
 @NgModule({
   declarations: [
-    ThirdComponent
+    GridComponent,HeaderComponent,MainComponent
   ],
   imports: [
     BrowserModule, FormsModule
   ],
   providers: [],
-  bootstrap: [ThirdComponent]
+  bootstrap: [MainComponent]
 })
 export class AppModule { }

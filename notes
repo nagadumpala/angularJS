@@ -10,6 +10,8 @@ ng g application name //create project inside applcation
 
 ng g c comali --project=step3Binding  //component creation 
 
+ ng g c child --project=step4Communication --flat -t -s -skipTests=true //create child project
+
 ng serve --project appName
 
 npm install express 
