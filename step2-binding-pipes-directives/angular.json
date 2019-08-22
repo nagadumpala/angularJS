@@ -474,6 +474,360 @@
           }
         }
       }
+    },
+    "step7Routing": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/step7Routing",
+      "sourceRoot": "projects/step7Routing/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/step7Routing",
+            "index": "projects/step7Routing/src/index.html",
+            "main": "projects/step7Routing/src/main.ts",
+            "polyfills": "projects/step7Routing/src/polyfills.ts",
+            "tsConfig": "projects/step7Routing/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/step7Routing/src/favicon.ico",
+              "projects/step7Routing/src/assets"
+            ],
+            "styles": [
+              "projects/step7Routing/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/step7Routing/src/environments/environment.ts",
+                  "with": "projects/step7Routing/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "step7Routing:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "step7Routing:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "step7Routing:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/step7Routing/src/test.ts",
+            "polyfills": "projects/step7Routing/src/polyfills.ts",
+            "tsConfig": "projects/step7Routing/tsconfig.spec.json",
+            "karmaConfig": "projects/step7Routing/karma.conf.js",
+            "assets": [
+              "projects/step7Routing/src/favicon.ico",
+              "projects/step7Routing/src/assets"
+            ],
+            "styles": [
+              "projects/step7Routing/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/step7Routing/tsconfig.app.json",
+              "projects/step7Routing/tsconfig.spec.json",
+              "projects/step7Routing/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/step7Routing/e2e/protractor.conf.js",
+            "devServerTarget": "step7Routing:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "step7Routing:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "step8Pipe": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/step8Pipe",
+      "sourceRoot": "projects/step8Pipe/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/step8Pipe",
+            "index": "projects/step8Pipe/src/index.html",
+            "main": "projects/step8Pipe/src/main.ts",
+            "polyfills": "projects/step8Pipe/src/polyfills.ts",
+            "tsConfig": "projects/step8Pipe/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/step8Pipe/src/favicon.ico",
+              "projects/step8Pipe/src/assets"
+            ],
+            "styles": [
+              "projects/step8Pipe/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/step8Pipe/src/environments/environment.ts",
+                  "with": "projects/step8Pipe/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "step8Pipe:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "step8Pipe:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "step8Pipe:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/step8Pipe/src/test.ts",
+            "polyfills": "projects/step8Pipe/src/polyfills.ts",
+            "tsConfig": "projects/step8Pipe/tsconfig.spec.json",
+            "karmaConfig": "projects/step8Pipe/karma.conf.js",
+            "assets": [
+              "projects/step8Pipe/src/favicon.ico",
+              "projects/step8Pipe/src/assets"
+            ],
+            "styles": [
+              "projects/step8Pipe/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/step8Pipe/tsconfig.app.json",
+              "projects/step8Pipe/tsconfig.spec.json",
+              "projects/step8Pipe/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/step8Pipe/e2e/protractor.conf.js",
+            "devServerTarget": "step8Pipe:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "step8Pipe:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "step9Directive": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/step9Directive",
+      "sourceRoot": "projects/step9Directive/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/step9Directive",
+            "index": "projects/step9Directive/src/index.html",
+            "main": "projects/step9Directive/src/main.ts",
+            "polyfills": "projects/step9Directive/src/polyfills.ts",
+            "tsConfig": "projects/step9Directive/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/step9Directive/src/favicon.ico",
+              "projects/step9Directive/src/assets"
+            ],
+            "styles": [
+              "projects/step9Directive/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/step9Directive/src/environments/environment.ts",
+                  "with": "projects/step9Directive/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "step9Directive:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "step9Directive:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "step9Directive:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/step9Directive/src/test.ts",
+            "polyfills": "projects/step9Directive/src/polyfills.ts",
+            "tsConfig": "projects/step9Directive/tsconfig.spec.json",
+            "karmaConfig": "projects/step9Directive/karma.conf.js",
+            "assets": [
+              "projects/step9Directive/src/favicon.ico",
+              "projects/step9Directive/src/assets"
+            ],
+            "styles": [
+              "projects/step9Directive/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/step9Directive/tsconfig.app.json",
+              "projects/step9Directive/tsconfig.spec.json",
+              "projects/step9Directive/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/step9Directive/e2e/protractor.conf.js",
+            "devServerTarget": "step9Directive:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "step9Directive:serve:production"
+            }
+          }
+        }
+      }
     }},
   "defaultProject": "step2-binding-pipes-directives"
 }

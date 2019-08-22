@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-  <h1>fd</h1>
-  <form action="#" name="user">
-    <label for="uname"> click me</label>
-    <input id="uname" type="text">
+  template : `
+  Forms in Angular
+  <app-template-form></app-template-form>
+  <hr>
+  <app-data-form></app-data-form>
+  <hr>
+  <app-reactive-form-builder></app-reactive-form-builder>
   `
 })
 export class AppComponent {
-  title = 'step5forms';
+  title = 'step3forms';
 }
