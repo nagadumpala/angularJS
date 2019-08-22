@@ -4,11 +4,11 @@ ng v
 
 ng new step1-HelloWorld //create angular application
 
-ng serve //compiling inside angular application
+ng serve //start server  angular application
 
 ng g application name //create project inside applcation
 
-ng g c comali --project=step3Binding  //component
+ng g c comali --project=step3Binding  //component creation
 
 ng serve --project appName
 

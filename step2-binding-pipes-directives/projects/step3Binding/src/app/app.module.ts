@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ComaliComponent } from './comali/comali.component';
+import { ThirdComponent } from './third.component';
 
 @NgModule({
   declarations: [
-    ComaliComponent
+    ThirdComponent
   ],
   imports: [
     BrowserModule, FormsModule
   ],
   providers: [],
-  bootstrap: [ComaliComponent]
+  bootstrap: [ThirdComponent]
 })
 export class AppModule { }
